@@ -28,16 +28,43 @@ def print_result(
                 if actioned == -1:
                     Control.unmute_microphone()
                     actioned = 0
-            elif gesture.category_name == "Thumb_Up":
+                with open("output/pointing_up.txt", "w") as file:
+                    file.write("Pointing Up")
+            else:
+                with open("output/pointing_up.txt", "w") as file:
+                    file.write("")
+            
+            if gesture.category_name == "Thumb_Up":
                 if actioned == -1:
                     Control.mute_microphone()
                     actioned = 0
-            elif gesture.category_name == "Victory":
-                with open("output/output.txt", "w") as file:
+                with open("output/thumb_up.txt", "w") as file:
+                    file.write("Thumb Up")
+            else:
+                with open("output/thumb_up.txt", "w") as file:
+                    file.write("")
+
+            if gesture.category_name == "Open_Palm":
+                with open("output/open_palm.txt", "w") as file:
+                    file.write("Open Palm")
+            else:
+                with open("output/pointing_up.txt", "w") as file:
+                    file.write("")
+
+            if gesture.category_name == "Victory":
+                with open("output/victory.txt", "w") as file:
                     file.write("Victory!")
-            elif gesture.category_name == "Closed_Fist":
-                with open("output/output.txt", "w") as file:
+            else:
+                with open("output/victory.txt", "w") as file:
+                    file.write("")
+
+            if gesture.category_name == "Closed_Fist":
+                with open("output/closed_fist.txt", "w") as file:
                     file.write("Closed Fist")
+            else:
+                with open("output/closed_fist.txt", "w") as file:
+                    file.write("")
+
             if gesture.category_name != "None":
                 # 手のランドマークの座標を取得
                 landmarks = result.hand_landmarks

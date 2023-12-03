@@ -2,5 +2,6 @@
 *.pth
 *.task
 output.txt
+*.txt
 
 __pycache__
