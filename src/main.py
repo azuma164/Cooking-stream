@@ -32,6 +32,12 @@ def print_result(
                 if actioned == -1:
                     Control.mute_microphone()
                     actioned = 0
+            elif gesture.category_name == "Victory":
+                with open("output/output.txt", "w") as file:
+                    file.write("Victory!")
+            elif gesture.category_name == "Closed_Fist":
+                with open("output/output.txt", "w") as file:
+                    file.write("Closed Fist")
             if gesture.category_name != "None":
                 # 手のランドマークの座標を取得
                 landmarks = result.hand_landmarks
@@ -85,7 +91,7 @@ if __name__ == "__main__":
                     f"Category: {category_global}",
                     (x_min, y_min - 10),
                     cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5,
+                    1.0,
                     (0, 255, 0),
                     2,
                     cv2.LINE_AA,

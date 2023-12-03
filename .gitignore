@@ -1,5 +1,6 @@
 .venv/
 *.pth
 *.task
+output.txt
 
 __pycache__
