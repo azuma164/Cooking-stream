@@ -1,0 +1,17 @@
+{
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    }
+  },
+  "cSpell.words": ["astype"],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.linting.enabled": true,
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.formatting.provider": "none"
+}

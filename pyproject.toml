@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "gesture-recognition"
+version = "0.1.0"
+description = ""
+authors = ["azuma164 <ornitho1027@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gesture_recognition"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+opencv-python = "^4.8.1.78"
+mediapipe = "^0.10.8"
+tensorflow = "^2.15.0"
+imageio = "^2.33.0"
+comtypes = "^1.2.0"
+pycaw = "^20230407"
+pyaudio = "^0.2.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
